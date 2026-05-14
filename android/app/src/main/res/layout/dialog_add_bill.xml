@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_glass_dialog">
+
+    <!-- 标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加账单"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 方向切换：两个并排按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/btn_expense"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支出"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_glass_button"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btn_income"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="收入"
+            android:textSize="14sp"
+            android:textColor="#999999"
+            android:background="@drawable/bg_glass_button"
+            android:layout_marginStart="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- 金额（大字） -->
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:hint="¥ 0.00"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:background="@null"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 分类 + 支付方式 并排 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="分类" android:textSize="12sp" android:textColor="#999999" />
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_glass_button"
+                android:paddingHorizontal="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="支付方式" android:textSize="12sp" android:textColor="#999999" />
+            <Spinner
+                android:id="@+id/spinner_payment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_glass_button"
+                android:paddingHorizontal="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 日期 + 时间 并排 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:background="@drawable/bg_glass_button"
+            android:layout_marginEnd="4dp" />
+
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:background="@drawable/bg_glass_button"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- 消费类型（仅支出时显示） -->
+    <LinearLayout
+        android:id="@+id/layout_consumption_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="消费类型" android:textSize="12sp" android:textColor="#999999"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/btn_consume_normal"
+                android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                android:gravity="center" android:text="必要" android:textSize="13sp"
+                android:textColor="#4CAF50" android:background="@drawable/bg_glass_button"
+                android:layout_marginEnd="4dp" android:clickable="true" android:focusable="true" />
+
+            <TextView android:id="@+id/btn_consume_optimizable"
+                android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                android:gravity="center" android:text="可省" android:textSize="13sp"
+                android:textColor="#FF9800" android:background="@drawable/bg_glass_button"
+                android:layout_marginHorizontal="4dp" android:clickable="true" android:focusable="true" />
+
+            <TextView android:id="@+id/btn_consume_impulse"
+                android:layout_width="0dp" android:layout_height="34dp" android:layout_weight="1"
+                android:gravity="center" android:text="冲动" android:textSize="13sp"
+                android:textColor="#F44336" android:background="@drawable/bg_glass_button"
+                android:layout_marginStart="4dp" android:clickable="true" android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 描述 -->
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="备注（选填）"
+        android:textSize="14sp"
+        android:background="@drawable/bg_glass_button"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:background="@drawable/bg_glass_button"
+            android:layout_marginEnd="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确认"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:layout_marginStart="4dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+</LinearLayout>

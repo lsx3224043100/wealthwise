@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#4CAF50</color>
+    <color name="purple_700">#388E3C</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- App specific colors -->
+    <color name="income_color">#4CAF50</color>     <!-- 收入绿色 -->
+    <color name="expense_color">#F44336</color>   <!-- 支出红色 -->
+    <color name="background_light">#FAFAFA</color>
+
+    <!-- Material Design 3 Colors -->
+    <color name="colorPrimary">#0072F5</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#D4E8FF</color>
+    <color name="colorOnPrimaryContainer">#002D7C</color>
+    <color name="colorSecondary">#92D9F7</color>
+    <color name="colorOnSecondary">#002960</color>
+    <color name="colorSecondaryContainer">#1C819F</color>
+    <color name="colorOnSecondaryContainer">#FFDCFC</color>
+    <color name="colorTertiary">#98D0FF</color>
+    <color name="colorOnTertiary">#003E6D</color>
+    <color name="colorTertiaryContainer">#1C819F</color>
+    <color name="colorOnTertiaryContainer">#E0E0E0</color>
+    <color name="colorError">#CB1B1B</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#8C0000</color>
+    <color name="colorBackground">#F9FAFB</color>
+    <color name="colorOnBackground">#1A1C1E</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#1A1C1E</color>
+    <color name="colorSurfaceVariant">#E0E0E0</color>
+    <color name="colorOnSurfaceVariant">#49454F</color>
+    <color name="colorOutline">#737373</color>
+
+    <!-- Glassmorphism colors -->
+    <color name="glass_bg">#CCFFFFFF</color>
+    <color name="glass_surface">#E6FFFFFF</color>
+    <color name="glass_card">#F2FFFFFF</color>
+    <color name="glass_border">#33FFFFFF</color>
+    <color name="glass_shadow">#1A000000</color>
+    <color name="glass_chip_selected">#1A0072F5</color>
+    <color name="glass_chip_unselected">#0DFFFFFF</color>
+    <color name="glass_divider">#1A000000</color>
+</resources>
