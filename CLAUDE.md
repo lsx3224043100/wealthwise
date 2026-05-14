@@ -127,7 +127,7 @@
 |------|------|
 | 后端 | Spring Boot 2.7 + MyBatis-Plus + MySQL 8 |
 | Android | Java + MPAndroidChart + Retrofit + OkHttp + Material 3 |
-| 接口 | `http://localhost:8081/api` |
+| 接口 | `http://localhost:8081/api`（修改 `build.gradle.kts` 中的 `API_BASE_URL`） |
 
 ---
 

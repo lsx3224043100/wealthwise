@@ -6,9 +6,16 @@ android {
     namespace = "com.wealthwise.app"
     compileSdk = 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId = "com.wealthwise.app"
         minSdk = 24
+
+        // API 地址，部署时修改此处
+        buildConfigField("String", "API_BASE_URL", "\"http://localhost:8081/api/\"")
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

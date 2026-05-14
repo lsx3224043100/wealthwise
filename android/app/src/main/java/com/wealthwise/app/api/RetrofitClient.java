@@ -2,6 +2,7 @@ package com.wealthwise.app.api;
 
 import android.content.Context;
 
+import com.wealthwise.app.BuildConfig;
 import com.wealthwise.app.SharedPreferencesManager;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -11,7 +12,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static final String BASE_URL = "http://localhost:8081/api/";
+    private static final String BASE_URL = BuildConfig.API_BASE_URL;
     private static ApiService apiService;
     private static Context appContext;
 
